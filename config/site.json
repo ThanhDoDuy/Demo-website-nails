@@ -1,0 +1,37 @@
+{
+  "salonName": "Olivia Nail Lounge",
+  "tagline": "Elegant Nails. Timeless Beauty.",
+  "heroImage": "/images/hero.jpg",
+  "services": [
+    { "id": "manicure", "name": "Classic Manicure", "price": "$25", "description": "Beautifully shaped and polished nails" },
+    { "id": "pedicure", "name": "Premium Pedicure", "price": "$35", "description": "Complete foot care and relaxation" },
+    { "id": "gel-polish", "name": "Gel Polish", "price": "$40", "description": "Long-lasting glossy finish" },
+    { "id": "acrylic", "name": "Acrylic Nails", "price": "$50", "description": "Durable and customizable extensions" },
+    { "id": "nail-art", "name": "Nail Art Design", "price": "$45", "description": "Custom designs and patterns" },
+    { "id": "spa-treatment", "name": "Deluxe Spa Treatment", "price": "$65", "description": "Ultimate relaxation with massage and polish" }
+  ],
+  "gallery": [
+    "/images/gallery-1.jpg",
+    "/images/gallery-2.jpg",
+    "/images/gallery-3.jpg",
+    "/images/gallery-4.jpg",
+    "/images/gallery-5.jpg",
+    "/images/gallery-6.jpg",
+    "/images/gallery-7.jpg",
+    "/images/gallery-8.jpg",
+    "/images/gallery-9.jpg"
+  ],
+  "about": "At Olivia Nail Lounge, we believe that beautiful nails are more than just aesthetics—they're an expression of elegance and self-care. Our certified nail technicians provide premium services in a serene, hygienic environment designed for relaxation. We use only the highest quality products to ensure your nails remain healthy and stunning. Every visit is a luxurious escape.",
+  "reviews": [
+    { "text": "The best nail salon experience I've ever had. The ambiance is incredible and the attention to detail is unmatched.", "author": "Jessica M.", "rating": 5 },
+    { "text": "Super clean, professional, and welcoming. My nails look absolutely gorgeous. Will definitely be back!", "author": "Anna L.", "rating": 5 },
+    { "text": "Love this place! The technicians are so talented and caring. It's my favorite self-care ritual now.", "author": "Sarah T.", "rating": 5 },
+    { "text": "Premium quality at reasonable prices. The whole experience feels like a luxury spa day.", "author": "Michelle R.", "rating": 5 }
+  ],
+  "contact": {
+    "phone": "(555) 123-4567",
+    "address": "1/87 Manchester Street, Christchurch 8011, New Zealand",
+    "hours": "Mon–Fri 9AM–7PM | Sat 10AM–6PM | Sun 12PM–5PM",
+    "email": "hello@olivianaillounge.com"
+  }
+}
