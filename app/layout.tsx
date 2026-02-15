@@ -38,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${playfairDisplay.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${playfairDisplay.variable} ${poppins.variable} scroll-smooth`}>
       <body className="font-sans antialiased">{children}</body>
     </html>
   )

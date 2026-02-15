@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import About from '@/components/About';
@@ -13,20 +14,29 @@ import { SiteConfig } from '@/types/config';
 export default function Home() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const config = siteConfig as SiteConfig;
+  const openBooking = () => setIsBookingOpen(true);
 
   return (
     <main className="min-h-screen bg-background">
-      <Hero config={config} onBookClick={() => setIsBookingOpen(true)} />
+      <Navbar config={config} onBookClick={openBooking} />
+
+      <Hero config={config} onBookClick={openBooking} />
 
       <div id="services">
         <Services config={config} />
       </div>
 
-      <About config={config} />
+      <div id="about">
+        <About config={config} />
+      </div>
 
-      <Reviews config={config} />
+      <div id="reviews">
+        <Reviews config={config} />
+      </div>
 
-      <Contact config={config} />
+      <div id="contact">
+        <Contact config={config} />
+      </div>
 
       <BookingForm
         config={config}
