@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Forward to backend public booking endpoint with salonId injected server-side
-    const backendResponse = await fetch(`${BACKEND_API_URL}/api/bookings/public`, {
+    const backendResponse = await fetch(`${BACKEND_API_URL}/bookings/public`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
