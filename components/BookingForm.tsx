@@ -26,6 +26,7 @@ interface BookingFormProps {
 export default function BookingForm({ config, isOpen, onClose }: BookingFormProps) {
   const [formData, setFormData] = useState({
     serviceName: config.services[0]?.id || '',
+    customService: '',
     customerName: '',
     customerPhone: '',
     bookingDate: '',
@@ -66,7 +67,7 @@ export default function BookingForm({ config, isOpen, onClose }: BookingFormProp
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          serviceName: formData.serviceName,
+          serviceName: formData.serviceName === 'other' ? formData.customService : formData.serviceName,
           customerName: formData.customerName,
           customerPhone: formData.customerPhone,
           bookingDate: formData.bookingDate,
@@ -82,6 +83,7 @@ export default function BookingForm({ config, isOpen, onClose }: BookingFormProp
         });
         setFormData({
           serviceName: config.services[0]?.id || '',
+          customService: '',
           customerName: '',
           customerPhone: '',
           bookingDate: '',
@@ -127,6 +129,7 @@ export default function BookingForm({ config, isOpen, onClose }: BookingFormProp
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="p-8 space-y-6">
+          <fieldset disabled={loading} className="space-y-6 disabled:opacity-60">
           {/* Service Selection */}
           <div>
             <label htmlFor="serviceName" className="block font-semibold text-foreground mb-2">
@@ -145,7 +148,20 @@ export default function BookingForm({ config, isOpen, onClose }: BookingFormProp
                   {service.name} - {service.price}
                 </option>
               ))}
+              <option value="other">Other (please specify)</option>
             </select>
+            {formData.serviceName === 'other' && (
+              <input
+                type="text"
+                id="customService"
+                name="customService"
+                value={formData.customService}
+                onChange={handleChange}
+                required
+                placeholder="Enter your desired service..."
+                className="w-full mt-3 px-4 py-3 border border-primary/20 rounded-lg focus:outline-none focus:border-primary bg-background"
+              />
+            )}
           </div>
 
           {/* Name */}
@@ -268,12 +284,20 @@ export default function BookingForm({ config, isOpen, onClose }: BookingFormProp
             </div>
           )}
 
+          </fieldset>
+
           {/* Submit Button */}
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-foreground text-background font-semibold py-4 px-6 rounded-lg hover:opacity-90 disabled:opacity-50 transition-opacity duration-200"
+            className="w-full bg-foreground text-background font-semibold py-4 px-6 rounded-lg hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed transition-opacity duration-200 flex items-center justify-center gap-2"
           >
+            {loading && (
+              <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24" fill="none">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+              </svg>
+            )}
             {loading ? 'Booking...' : 'Complete Booking'}
           </button>
         </form>
