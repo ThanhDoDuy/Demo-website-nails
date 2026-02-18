@@ -7,7 +7,8 @@
       "id": "manicure",
       "name": "Classic Manicure",
       "price": "$25",
-      "description": "Beautifully shaped and polished nails"
+      "description": "Beautifully shaped and polished nails",
+      "image": "https://res.cloudinary.com/dpb1c1mnw/image/upload/v1771388571/nail-salons/6990877dbad66eaac0499fce/xyufpopxbbpxmgxanodi.png"
     },
     {
       "id": "pedicure",
