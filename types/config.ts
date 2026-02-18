@@ -3,6 +3,7 @@ export interface Service {
   name: string;
   price: string;
   description: string;
+  image?: string;
 }
 
 export interface Review {

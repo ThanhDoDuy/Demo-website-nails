@@ -22,8 +22,12 @@ export default function Services({ config }: ServicesProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {config.services.map((service, index) => {
-            // Map each service to a gallery image (cycle if more services than images)
-            const bgImage = config.gallery[index % config.gallery.length];
+            // Prefer service image; fallback to gallery (cycle) when gallery has images
+            const bgImage =
+              service.image ??
+              (config.gallery.length > 0
+                ? config.gallery[index % config.gallery.length]
+                : '/images/hero.jpg');
 
             return (
               <div
