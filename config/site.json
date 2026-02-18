@@ -37,8 +37,9 @@
     {
       "id": "spa-treatment",
       "name": "Deluxe Spa Treatment",
-      "price": "$65",
-      "description": "Ultimate relaxation with massage and polish"
+      "price": "$100",
+      "description": "Ultimate relaxation with massage and polish",
+      "image": "https://res.cloudinary.com/dpb1c1mnw/image/upload/v1771401906/nail-salons/6990877dbad66eaac0499fce/ngzv568ebtedmcvrdgh8.png"
     }
   ],
   "gallery": [
