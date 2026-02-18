@@ -39,6 +39,13 @@
       "name": "Deluxe Spa Treatment",
       "price": "$65",
       "description": "Ultimate relaxation with massage and polish"
+    },
+    {
+      "id": "",
+      "name": "Acrylic Full Set",
+      "price": "$70",
+      "description": "Durable acrylic extensions customized to your preferred length and shape with a smooth, flawless finish.",
+      "image": "https://res.cloudinary.com/dpb1c1mnw/image/upload/v1771389721/nail-salons/6990877dbad66eaac0499fce/uvpivuiagat42rhegj0g.png"
     }
   ],
   "gallery": [
