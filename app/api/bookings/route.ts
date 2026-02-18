@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 const BACKEND_API_URL = process.env.BACKEND_API_URL;
-const SALON_ID = process.env.NEXT_PUBLIC_SALON_ID;
+const SALON_ID = process.env.SALON_ID;
 
 /**
  * POST /api/bookings

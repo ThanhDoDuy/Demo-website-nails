@@ -5,7 +5,7 @@
 // Ensures required env vars are set before building.
 // --------------------------------------------------
 const requiredEnvVars = /** @type {const} */ ([
-  'NEXT_PUBLIC_SALON_ID',
+  'SALON_ID',
   'BACKEND_API_URL',
 ]);
 
